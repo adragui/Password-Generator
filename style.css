@@ -11,13 +11,12 @@ body {
 }
 
 .pswd-generator {
-    padding-top: 115px;
+    padding-top: 50px;
     padding-left: 52px;
     padding-right: 52px;
     display: flex;
     flex-direction: column;
     width: 550px;
-    height: 550px;
     background-color: #1F2937;
     justify-content: flex-start;
     margin: 40px auto;
@@ -69,21 +68,22 @@ h2 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .password-show {
     background-color: #273549;
     width: 211px;
-    height: 40px;
+    height: 39px;
     color: #55F991;
     font-size: 16px;
-    padding: 12px 0 12px 45px;
-    margin: 0;
+    padding: 11.5px 0 11.5px 38px;
+    margin: 0 0 10px 0;
     border-radius: 6px;
     position: relative;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    line-height: 20px;
+    line-height: 18px
 }
 
 .password-show:before {
@@ -102,3 +102,53 @@ h2 {
     transform: scale(1.1);
 }
 
+@media only screen and (max-width: 768px) {
+    .pswd-generator {
+        width: 85vw;
+        display: flex;
+
+        text-align: center;
+    }
+    
+    #generate-btn {
+        align-self: center;
+    }
+    
+    .line-break {
+        border-bottom: 1px solid #2F3E53 ;
+        margin-bottom: 35px;
+    }
+    
+    .passwords-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .password-show {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 15px;
+    }
+    
+    .password-show:before {
+        content: none; /* You should use \ and not /*/
+    }
+    
+    .password-show {
+        padding: 11.5px 0 11.5px 0px;
+        text-align: center;
+        font-size: 13px;
+    }
+}
