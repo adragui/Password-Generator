@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -56,6 +57,7 @@ h2 {
     padding: 9px 15px 9px 17px;
     width: 191px;
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .line-break {
@@ -72,11 +74,31 @@ h2 {
 .password-show {
     background-color: #273549;
     width: 211px;
-    height: 39px;
+    height: 40px;
     color: #55F991;
     font-size: 16px;
-    padding: 10px;
+    padding: 12px 0 12px 45px;
     margin: 0;
     border-radius: 6px;
-    text-align: center;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    line-height: 20px;
 }
+
+.password-show:before {
+    content: '\f0c5'; /* You should use \ and not /*/
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    font-style: normal;
+    font-weight: 100;
+    font-size:14px;
+    position: absolute;
+    left: 12px;
+    color: #D5D4D8;
+}
+
+.password-show:hover:before {
+    transition: all 0.1s linear;
+    transform: scale(1.1);
+}
+
